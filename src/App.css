@@ -1,5 +1,6 @@
 body{
-  background-color: black;
+  background-color:black;
+  z-index: -1;
 }
 .nav{
   justify-content: center;
@@ -16,7 +17,8 @@ body{
   padding-left: 0.5vw;
   outline: none;
   border: none;
-  background-color: rgb(118, 189, 189);
+  /* background-color: rgb(118, 189, 189); */
+  background-color: rgb(123, 84, 155);
   resize: none;
   color: white;
   border-radius: 0.5vw;
@@ -38,15 +40,30 @@ color: rgb(255, 255, 255);
 color: rgb(255, 255, 255);
 }
 
+.view-more{
+  position: relative;
+  height: 5vw;
+  width: 65vw;
+  background-color: rgb(233, 233, 233);
+  z-index: 0;
+  border-radius: 2vw;
+  
+}
+
 table{
 position: relative;
 width:65vw;
 top:2vw;
 left:17.5vw;
+border-spacing: 0;
 
+}
+th{
+  color: white;
 }
 td{
 border-bottom: 1px solid white;
+
 padding-top: 0.5vw;
 
 padding-bottom: 0.5vw;
@@ -62,6 +79,7 @@ border-radius: 50%;
 }
 .coin-name,.coin-code,.market-cap {
   color: white;
+  
 }
 
 .coin-profit{
@@ -69,11 +87,124 @@ color:rgb(10, 235, 10);
 }
 .more-info{
 color:white;
-background-color: rgb(118, 189, 189);
+/* background-color: rgb(118, 189, 189); */
+background-color: rgb(123, 84, 155);
 padding-left: 0.5vw;
 padding-right: 0.5vw;
 padding-top: 0.25vw;
 
 padding-bottom: 0.25vw;
 border-radius: 0.5vw;
+border: none;
+cursor: pointer;
+
+}
+
+.more-info:hover{
+  background-color: rgb(123, 84, 155,0.5);
+}
+
+.box1 {
+  background-color: #e2dfe2;
+  
+  /*opacity: .5;*/
+  width:30vw;
+  height:27vw;
+  padding-top: 2vw;
+  position:fixed;
+  left:35vw;
+  top:calc((100vh - 30vw) / 2);
+  z-index:1;
+  border-radius: 2vw;
+  border: 1px solid white;
+  text-align: center;
+}
+.box1 img{
+  position: relative;
+  left:1.25vw;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.box1 ul{
+  list-style: none;
+  font-weight: bold;
+}
+.box1 ul li{
+  color: #000000;
+  padding-bottom: 0.5vw;
+}
+.box1 span{
+   color:white;
+}
+
+@media only screen and (max-width:1200px)
+{
+   
+  h1{
+    font-size: 5vw;
+  }
+
+  .nav textarea{
+    height: 4.3vw;
+    width: 28vw;
+    padding-top: 1.8vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1.8vw;
+    font-size: 2.5vw;
+    border-radius: 8px;
+  }
+
+  table{
+    width:90vw;
+    min-height: 30vh;
+    left:5vw;
+    top:8vw;
+  }
+  td{
+    max-width: 20vw;
+    border-bottom: 0.1vw solid white;
+   
+    font-weight: 550;
+    padding-top: 1.8vw;
+    padding-bottom: 1.8vw;
+    font-size: 2.5vw;
+  }
+
+  .crypto-icons{
+    width: 4vw;
+    height: 4vw;
+    object-fit: contain;
+    border-radius: 50%;
+    
+    }
+  .more-info{
+    padding-left:1.35vw;
+padding-right: 1.35vw;
+padding-top: 1vw;
+
+padding-bottom: 1vw;
+border-radius: 16px;
+font-size: 2.5vw;
+  }
+  .box1{
+    width: 70vw;
+    left:15vw;
+    top:calc((100vh - 70vw) / 2);
+    height: 40vh;
+    padding-top: 6vw;
+    padding-bottom: 5vw;
+    overflow-y: auto;
+  }
+  .box1 h2{
+    font-size: 4.5vw;
+  }
+  .box1 ul{
+    position: relative;
+    right:5vw;
+  }
+  .box1 ul li{
+    font-size: 3vw;
+  }
 }

@@ -1,16 +1,15 @@
 import React from "react";
 import './App.css';
-import Header from './Header';
-import List from "./List";
+ import Header from './Header';
 
 
 function App() {
+  
   return (
     <>
     <Header/>
-    <table>
-   <List/>
-   </table>
+   
+    
     </>
   );
 }
